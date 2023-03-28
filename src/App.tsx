@@ -39,7 +39,15 @@ const PartnerDetails = ({ data }) => {
   return (
     <div style={{ width: '200%', marginLeft: '40%', paddingTop: '24px' }}>
       <Card>
-        <Text>{data.name}</Text>
+      <Text>{data.id}</Text>
+        <br />
+      <Text>{data.name}</Text>
+        <br />
+      <Text>{data.address}</Text>
+        <br />
+        <Text>{data.description}</Text>
+        <br />
+       <Text>{data.isPartner}</Text>
         <br />
         <Text>{data.industry}</Text>
         <br />
@@ -61,7 +69,7 @@ const App = () => {
           dataSource={data}
           renderItem={(item) => (
             <List.Item key={item.id}>
-              <Card title={item.name}>
+              <Card title={item.name} >
                 {item.isPartner ? (
                   <>
                     {isMobile ? (
